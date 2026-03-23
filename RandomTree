@@ -1,0 +1,60 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.trees.RandomTree -K 0 -M 1.0 -V 0.001 -S 1
+Relation:     classy
+Instances:    150
+Attributes:   6
+              Book_Title
+              Content_Clarity
+              Examples_Quality
+              Content_Depth
+              Usefulness_for_Learning
+              Overall_Content_Rating
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+
+RandomTree
+==========
+
+Content_Clarity = High
+|   Examples_Quality = Low : Good (26/0)
+|   Examples_Quality = Medium : Good (20/0)
+|   Examples_Quality = High : Excellent (15/0)
+Content_Clarity = Medium : Average (49/0)
+Content_Clarity = Low : Poor (40/0)
+
+Size of the tree : 7
+
+Time taken to build model: 0 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances         142               94.6667 %
+Incorrectly Classified Instances         8                5.3333 %
+Kappa statistic                          0.9258
+Mean absolute error                      0.0294
+Root mean squared error                  0.1604
+Relative absolute error                  8.1866 %
+Root relative squared error             37.8489 %
+Total Number of Instances              150     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.935    0.010    0.977      0.935    0.956      0.937    0.962     0.933     Good
+                 0.939    0.030    0.939      0.939    0.939      0.909    0.969     0.932     Average
+                 0.867    0.015    0.867      0.867    0.867      0.852    0.924     0.764     Excellent
+                 1.000    0.018    0.952      1.000    0.976      0.967    0.995     0.974     Poor
+Weighted Avg.    0.947    0.019    0.947      0.947    0.947      0.927    0.969     0.927     
+
+=== Confusion Matrix ===
+
+  a  b  c  d   <-- classified as
+ 43  2  1  0 |  a = Good
+  0 46  1  2 |  b = Average
+  1  1 13  0 |  c = Excellent
+  0  0  0 40 |  d = Poor
+

@@ -1,0 +1,20 @@
+=== Run information ===
+
+Scheme:       weka.associations.FPGrowth -P 2 -I -1 -N 10 -T 0 -C 0.9 -D 0.05 -U 1.0 -M 0.1
+Relation:     book_reviews_fp_growth
+Instances:    200
+Attributes:   6
+              clarity_high
+              clarity_medium
+              examples_high
+              depth_high
+              usefulness_low
+              recommended_yes
+=== Associator model (full training set) ===
+
+FPGrowth found 3 rules (displaying top 3)
+
+1. [clarity_medium=f, depth_high=f, recommended_yes=f]: 43 ==> [examples_high=f]: 40   <conf:(0.93)> lift:(1.32) lev:(0.05) conv:(3.17) 
+2. [usefulness_low=f, clarity_medium=f, depth_high=f, recommended_yes=f]: 23 ==> [examples_high=f]: 21   <conf:(0.91)> lift:(1.3) lev:(0.02) conv:(2.26) 
+3. [usefulness_low=f, clarity_medium=f, recommended_yes=f]: 34 ==> [examples_high=f]: 31   <conf:(0.91)> lift:(1.29) lev:(0.04) conv:(2.51) 
+

@@ -1,0 +1,43 @@
+=== Run information ===
+
+Scheme:       weka.associations.Apriori -N 10 -T 0 -C 0.6 -D 0.05 -U 1.0 -M 0.05 -S -1.0 -c -1
+Relation:     classy
+Instances:    150
+Attributes:   6
+              Book_Title
+              Content_Clarity
+              Examples_Quality
+              Content_Depth
+              Usefulness_for_Learning
+              Overall_Content_Rating
+=== Associator model (full training set) ===
+
+
+Apriori
+=======
+
+Minimum support: 0.1 (15 instances)
+Minimum metric <confidence>: 0.6
+Number of cycles performed: 18
+
+Generated sets of large itemsets:
+
+Size of set of large itemsets L(1): 21
+
+Size of set of large itemsets L(2): 67
+
+Size of set of large itemsets L(3): 18
+
+Best rules found:
+
+ 1. Overall_Content_Rating=Average 49 ==> Content_Clarity=Medium 49    <conf:(1)> lift:(3.06) lev:(0.22) [32] conv:(32.99)
+ 2. Content_Clarity=Medium 49 ==> Overall_Content_Rating=Average 49    <conf:(1)> lift:(3.06) lev:(0.22) [32] conv:(32.99)
+ 3. Overall_Content_Rating=Good 46 ==> Content_Clarity=High 46    <conf:(1)> lift:(2.46) lev:(0.18) [27] conv:(27.29)
+ 4. Overall_Content_Rating=Poor 40 ==> Content_Clarity=Low 40    <conf:(1)> lift:(3.75) lev:(0.2) [29] conv:(29.33)
+ 5. Content_Clarity=Low 40 ==> Overall_Content_Rating=Poor 40    <conf:(1)> lift:(3.75) lev:(0.2) [29] conv:(29.33)
+ 6. Examples_Quality=Low Overall_Content_Rating=Good 26 ==> Content_Clarity=High 26    <conf:(1)> lift:(2.46) lev:(0.1) [15] conv:(15.43)
+ 7. Content_Clarity=High Examples_Quality=Low 26 ==> Overall_Content_Rating=Good 26    <conf:(1)> lift:(3.26) lev:(0.12) [18] conv:(18.03)
+ 8. Usefulness_for_Learning=Low Overall_Content_Rating=Average 21 ==> Content_Clarity=Medium 21    <conf:(1)> lift:(3.06) lev:(0.09) [14] conv:(14.14)
+ 9. Content_Clarity=Medium Usefulness_for_Learning=Low 21 ==> Overall_Content_Rating=Average 21    <conf:(1)> lift:(3.06) lev:(0.09) [14] conv:(14.14)
+10. Examples_Quality=Medium Overall_Content_Rating=Good 20 ==> Content_Clarity=High 20    <conf:(1)> lift:(2.46) lev:(0.08) [11] conv:(11.87)
+

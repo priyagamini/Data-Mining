@@ -1,0 +1,55 @@
+=== Run information ===
+
+Scheme:       weka.clusterers.SimpleKMeans -init 0 -max-candidates 100 -periodic-pruning 10000 -min-density 2.0 -t1 -1.25 -t2 -1.0 -N 2 -A "weka.core.ManhattanDistance -R first-last" -I 500 -num-slots 1 -S 10
+Relation:     classy
+Instances:    150
+Attributes:   6
+              Book_Title
+              Content_Clarity
+              Examples_Quality
+              Content_Depth
+              Usefulness_for_Learning
+              Overall_Content_Rating
+Test mode:    evaluate on training data
+
+
+=== Clustering model (full training set) ===
+
+
+kMeans
+======
+
+Number of iterations: 3
+Sum of within cluster distances: 486.0
+
+Initial starting points (random):
+
+Cluster 0: 'Machine Learning',Medium,Medium,Low,Low,Average
+Cluster 1: 'Python Programming',Low,Medium,High,High,Poor
+
+Missing values globally replaced with mean/mode
+
+Final cluster centroids:
+                                                   Cluster#
+Attribute                        Full Data                0                1
+                                   (150.0)           (89.0)           (61.0)
+============================================================================
+Book_Title                Database Systems Machine Learning Database Systems
+Content_Clarity                       High           Medium              Low
+Examples_Quality                       Low              Low              Low
+Content_Depth                       Medium              Low             High
+Usefulness_for_Learning                Low              Low           Medium
+Overall_Content_Rating             Average          Average             Poor
+
+
+
+
+Time taken to build model (full training data) : 0.02 seconds
+
+=== Model and evaluation on training set ===
+
+Clustered Instances
+
+0       89 ( 59%)
+1       61 ( 41%)
+

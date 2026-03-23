@@ -1,0 +1,53 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.trees.RandomForest -P 100 -I 100 -num-slots 1 -K 0 -M 1.0 -V 0.001 -S 1
+Relation:     classy
+Instances:    150
+Attributes:   6
+              Book_Title
+              Content_Clarity
+              Examples_Quality
+              Content_Depth
+              Usefulness_for_Learning
+              Overall_Content_Rating
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+RandomForest
+
+Bagging with 100 iterations and base learner
+
+weka.classifiers.trees.RandomTree -K 0 -M 1.0 -V 0.001 -S 1 -do-not-check-capabilities
+
+Time taken to build model: 0.11 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances         150              100      %
+Incorrectly Classified Instances         0                0      %
+Kappa statistic                          1     
+Mean absolute error                      0.0345
+Root mean squared error                  0.0583
+Relative absolute error                  9.5814 %
+Root relative squared error             13.7586 %
+Total Number of Instances              150     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 1.000    0.000    1.000      1.000    1.000      1.000    1.000     1.000     Good
+                 1.000    0.000    1.000      1.000    1.000      1.000    1.000     1.000     Average
+                 1.000    0.000    1.000      1.000    1.000      1.000    1.000     1.000     Excellent
+                 1.000    0.000    1.000      1.000    1.000      1.000    1.000     1.000     Poor
+Weighted Avg.    1.000    0.000    1.000      1.000    1.000      1.000    1.000     1.000     
+
+=== Confusion Matrix ===
+
+  a  b  c  d   <-- classified as
+ 46  0  0  0 |  a = Good
+  0 49  0  0 |  b = Average
+  0  0 15  0 |  c = Excellent
+  0  0  0 40 |  d = Poor
+
